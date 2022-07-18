@@ -86,7 +86,15 @@ img {
     list-style: none;
 }
 
-.nav-mobile-menu-link a, .nav-mobile-menu-link .btn  {
+/* .nav-mobile-menu-links::after {
+    content: '';
+    display: block;
+    background: url('/images/bg-pattern-mobile-nav.svg') no-repeat bottom / contain;
+    width: 375px;
+    height: 218px;
+} */
+
+.nav-mobile-menu-link a, .nav-mobile-menu-link .btn {
     text-decoration: none;
     color: var(--neutral-100);
     text-transform: uppercase;
@@ -120,6 +128,7 @@ img {
 .hero {
     background-color: var(--primary-violet);
     color: var(--neutral-100);
+    position: relative;
 }
 
 .hero-text {
@@ -132,13 +141,11 @@ img {
     display: block;
     width: 124px;
     height: 330px;
-    /* z-index: 4; */
-    background-image: url('../images/bg-pattern-intro-right-mobile.svg') ;
+    background-image: url('../images/bg-pattern-intro-right-mobile.svg');
     background-repeat: no-repeat;
-    /* position: absolute;
-        top: 25%;
-        bottom: 25%;
-        right: 0; */
+    position: absolute;
+        bottom: -175px;
+        right: 0;
 }
 
 .about {
@@ -170,7 +177,7 @@ img {
 }
 
 .how-we-work {
-    margin: 1.25em;
+    margin: 1.25em 1.25em 8em 1.25em;
     color: var(--neutral-100);
     background: var(--primary-violet) url('../images/bg-pattern-how-we-work-mobile.svg') no-repeat top right;
 }
@@ -180,13 +187,165 @@ img {
 }
 
 footer {
-    background: var(--neutral-200) url('../images/bg-pattern-footer-mobile.svg') no-repeat top;
+    background: var(--neutral-200) url('../images/bg-pattern-footer-mobile.svg') no-repeat top / contain;
     padding: 2em;
+    text-transform: uppercase;
 }
 
+footer h3, h4 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
 
+footer hr {
+    opacity: 21%;
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
 
+footer a {
+    text-decoration: none;
+    color: var(--primary-violet);
+}
 
+.social  {
+    padding: 4em 7em 2em 7em;
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.social-icons  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icons img  {
+    width: 25px;
+    height: 25px;
+}
+
+.footer-logo  {
+    width: 125px;
+    margin-bottom: 2.5em;
+}
+
+h4 + h3 {
+    margin-top: 2em;
+}
+
+h3 + h4 {
+    margin-top: 2em;
+}
+
+h4 + h4 {
+    margin-top: 1em;
+}
+
+.attribution { 
+    margin-top: 4em;
+    font-size: 11px; 
+    text-align: center; 
+    text-transform: none;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 1440px) {
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+
+    .nav-menu-icon {
+        display: none;
+    }
+    
+    .nav-mobile-menu {
+        display: block;
+        height: auto;
+        background-color: var(--neutral-100);
+    }
+
+    .nav-mobile-menu-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        height: auto;
+        padding: .25em .25em;
+    }
+
+    .nav-mobile-menu-links a {
+        color: var(--neutral-500);
+        font-weight: 700;
+    }
+
+    .nav-mobile-menu-link .btn {
+        color: var(--neutral-900);
+    }
+
+    .nav-mobile-menu-bg {
+        display: none;
+    }
+
+    .nav-mobile-menu-link.nav-mobile-menu-btn, .btn-lg {
+        width: auto;
+    }
+
+    .nav-mobile-menu-link {
+        margin: 0 0;
+        font-size: 1.1em;
+    }
+
+    .nav-mobile-menu-link + .nav-mobile-menu-link {
+        margin-left: 1.5em;
+    }
+
+    .nav-mobile-menu-link + .nav-mobile-menu-link.nav-mobile-menu-btn {
+        margin-left: 2em;
+    }
+
+    nav .btn {
+        background-color: var(--neutral-100);
+        color: var(--primary-violet);
+        border: 2px solid var(--primary-violet);
+        padding: .55em 1.4em;
+    }
+    
+    .nav-mobile {
+        padding: 2em 1em;
+    }
+
+    section {
+        padding-left: 10em;
+        padding-right: 10em;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 10em;
+    }
+
+    .hero-pattern {
+        position: absolute;
+        width: 436px;
+        height: 593px;
+        top: 0;
+        right: 0;
+        background: url('../images/bg-pattern-intro-right-desktop.svg') no-repeat;
+    }
+
+    .hero::after {
+        display: none;
+    }
+
+    .hero-text {
+        background: none;
+        text-align: left;
+    }
+}

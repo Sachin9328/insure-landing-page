@@ -34,8 +34,15 @@
     </nav>
 
     <section class="hero">
-        <div>
-            <img src="images/image-intro-mobile.jpg" alt="" srcset="images/image-intro-mobile.jpg 1x, images/image-intro-desktop.jpg 2x">
+        <div class="hero-pattern"></div>
+        <div class="hero-img">
+            <img srcset="images/image-intro-mobile.jpg 375w,
+                         images/image-intro-desktop.jpg 540w"
+                 sizes="(max-width: 1000px) 375px,
+                        1100px"
+                 src="images/image-intro-mobile.jpg"
+                 alt=""
+            >
         </div>
         <div class="hero-text pd1">
             <h1>Humanizing your insurance.</h1>
@@ -83,9 +90,16 @@
     </section>
 
     <footer class="mg1">
-        <div>
-            <img src="/images/logo.svg" alt="">
+        <div class="social">
+            <img class="footer-logo" src="/images/logo.svg" alt="">
+            <div class="social-icons">
+                <a href=""><img src="/images/icon-facebook.svg" alt=""></a>
+                <a href=""><img src="/images/icon-twitter.svg" alt=""></a>
+                <a href=""><img src="/images/icon-pinterest.svg" alt=""></a>
+                <a href=""><img src="/images/icon-instagram.svg" alt=""></a>
+            </div>
         </div>
+        <hr>
         <div>
             <h3>Our company</h3>
             <h4><a href="">How we work</a></h4>
