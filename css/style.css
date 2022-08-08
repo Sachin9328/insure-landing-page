@@ -6,7 +6,6 @@
     --neutral-500: hsl(273, 4%, 51%);
     --neutral-200: hsl(0, 0%, 98%);
     --neutral-100: hsl(0, 0%, 100%);
-    /* --height: calc(100vh - 86px); */
 }
 
 * {
@@ -55,16 +54,20 @@ img {
     text-transform: uppercase;
 }
 
-.hero .btn {
-    margin-top: 1em;
-}
-
 .pd1 {
     padding: 4.5em 1.65em;
 }
 
 .pd2 {
     padding: 8em 1.65em;
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+
+.hero .btn {
+    margin-top: 1em;
 }
 
 .nav-mobile {
@@ -78,6 +81,17 @@ img {
     display: none;
     height: 100vh;
     background: var(--neutral-700);
+}
+
+.nav-mobile-menu-bg {
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+    right: 0;
+}
+
+.nav-mobile-menu-open {
+    display: block;
 }
 
 .nav-mobile-menu-links {
@@ -100,21 +114,6 @@ img {
     font-size: 1.375em;
 }
 
-.nav-mobile-menu-bg {
-    position: absolute;
-    bottom: -21px;
-    left: 0;
-    right: 0;
-}
-
-.nav-mobile-menu-open {
-    display: block;
-}
-
-.overflowHidden {
-    overflow: hidden;
-}
-
 .nav-mobile-menu-link.nav-mobile-menu-btn, .btn-lg {
     width: 100%;
 }
@@ -125,13 +124,12 @@ img {
     position: relative;
 }
 
-.hero-title {
-    font-size: 2.625em;
+.hero-text {
+    background: url('../images/bg-pattern-intro-left-mobile.svg') no-repeat top left;
 }
 
-.hero-text {
-    z-index: 1;
-    background: url('../images/bg-pattern-intro-left-mobile.svg') no-repeat top left;
+.hero-title {
+    font-size: 2.625em;
 }
 
 .hero::after {
@@ -150,8 +148,8 @@ img {
     display: none;
 }
 
-.about {
-    z-index: 1;
+.about p, h3 {
+    color: var(--neutral-500);
 }
 
 .about-hr {
@@ -173,10 +171,6 @@ img {
     width: 75px;
     height: 75px;
     margin: 1.25em 1.25em 1.625em 1.25em;
-}
-
-.about p, h3 {
-    color: var(--neutral-500);
 }
 
 .how-we-work {
@@ -212,8 +206,13 @@ footer a {
     color: var(--primary-violet);
 }
 
-.social  {
+.social {
     padding: 4em 7em 2em 7em;
+}
+
+.footer-logo  {
+    width: 125px;
+    margin-bottom: 2.5em;
 }
 
 .social-icons  {
@@ -224,11 +223,6 @@ footer a {
 .social-icons img  {
     width: 25px;
     height: 25px;
-}
-
-.footer-logo  {
-    width: 125px;
-    margin-bottom: 2.5em;
 }
     
 .footer-links div + div {
@@ -260,12 +254,6 @@ footer h4 + h4 {
         text-align: initial;
     }
 
-    .btn:hover {
-        background-color: var(--neutral-100);
-        color: var(--primary-violet);
-        border: 1px solid var(--neutral-100);
-    }
-
     nav {
         display: flex;
         flex-direction: row;
@@ -275,14 +263,49 @@ footer h4 + h4 {
         margin-right: 15em;
     }
 
-    .nav-menu-icon {
-        display: none;
+    .btn:hover {
+        background-color: var(--neutral-100);
+        color: var(--primary-violet);
+        border: 1px solid var(--neutral-100);
+    }
+
+    .pdlr {
+        padding-left: 5.5em;
+        padding-right: 5.5em;
+    }
+
+    .pd2 {
+        padding: 0 0;
+    }
+
+    nav .btn {
+        background-color: var(--neutral-100);
+        color: var(--primary-violet);
+        border: 2px solid var(--primary-violet);
+        padding: .55em 1.4em;
+    }
+
+    nav .btn:hover {
+        background-color: var(--primary-violet);
+        color: var(--neutral-100);
+    }
+    
+    .nav-mobile {
+        padding: 2em 1em;
     }
     
     .nav-mobile-menu {
         display: block;
         height: auto;
         background-color: var(--neutral-100);
+    }
+
+    .nav-mobile-menu-bg {
+        display: none;
+    }
+
+    .nav-menu-icon {
+        display: none;
     }
 
     .nav-mobile-menu-links {
@@ -302,21 +325,17 @@ footer h4 + h4 {
         color: var(--primary-violet);
     }
 
+    .nav-mobile-menu-link {
+        margin: 0 0;
+        font-size: 1.1em;
+    }
+
     .nav-mobile-menu-link .btn {
         color: var(--neutral-900);
     }
 
-    .nav-mobile-menu-bg {
-        display: none;
-    }
-
     .nav-mobile-menu-link.nav-mobile-menu-btn, .btn-lg {
         width: auto;
-    }
-
-    .nav-mobile-menu-link {
-        margin: 0 0;
-        font-size: 1.1em;
     }
 
     .nav-mobile-menu-link + .nav-mobile-menu-link {
@@ -325,27 +344,6 @@ footer h4 + h4 {
 
     .nav-mobile-menu-link + .nav-mobile-menu-link.nav-mobile-menu-btn {
         margin-left: 2em;
-    }
-
-    nav .btn {
-        background-color: var(--neutral-100);
-        color: var(--primary-violet);
-        border: 2px solid var(--primary-violet);
-        padding: .55em 1.4em;
-    }
-
-    nav .btn:hover {
-        background-color: var(--primary-violet);
-        color: var(--neutral-100);
-    }
-    
-    .nav-mobile {
-        padding: 2em 1em;
-    }
-
-    .pdlr {
-        padding-left: 5.5em;
-        padding-right: 5.5em;
     }
 
     .hero {
@@ -360,10 +358,13 @@ footer h4 + h4 {
             "hero-white1 hero-image hero-white2";
     }
 
-    .hero-hr {
-        display: block;
-        margin-bottom: 6em;
-        width: 20%;
+    .hero h1 {
+        font-size: 5em;
+    }
+
+    .hero p {
+        font-size: 1.4em;
+        margin-bottom: 1.75em;
     }
 
     .hero-text {
@@ -374,13 +375,10 @@ footer h4 + h4 {
         padding-top: 0;
     }
 
-    .hero h1 {
-        font-size: 5em;
-    }
-
-    .hero p {
-        font-size: 1.4em;
-        margin-bottom: 1.75em;
+    .hero-hr {
+        display: block;
+        margin-bottom: 6em;
+        width: 20%;
     }
 
     .hero .btn {
@@ -435,10 +433,6 @@ footer h4 + h4 {
             left: 0;
     }
 
-    .pd2 {
-        padding: 0 0;
-    }
-
     .about {
         margin-bottom: 6em;
     }
@@ -474,14 +468,14 @@ footer h4 + h4 {
         background: var(--primary-violet) url('../images/bg-pattern-how-we-work-desktop.svg') no-repeat top right / contain;
     }
 
-    .how-we-work .btn {
-        flex-grow: 0;
-    }
-
     .how-we-work h2 {
         margin-bottom: 0;
         font-size: 4em;
         max-width: 50%;
+    }
+
+    .how-we-work .btn {
+        flex-grow: 0;
     }
 
     footer {
@@ -491,7 +485,8 @@ footer h4 + h4 {
     }
 
     .footer-logo  {
-        width: 175px;
+        width: 112px;
+        height: 18px;
         margin-bottom: 0;
     }
 
@@ -515,11 +510,6 @@ footer h4 + h4 {
 
     .social-icon + .social-icon {
         padding-left: 1.25em;
-    }
-
-    .footer-logo {
-        width: 112px;
-        height: 18px;
     }
 
     .footer-links {
