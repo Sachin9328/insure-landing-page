@@ -207,7 +207,7 @@ footer a {
 }
 
 .social {
-    padding: 4em 7em 2em 7em;
+    padding: 4em 5em 2em 5em;
 }
 
 .footer-logo  {
@@ -288,6 +288,7 @@ footer h4 + h4 {
     nav .btn:hover {
         background-color: var(--primary-violet);
         color: var(--neutral-100);
+        border: 2px solid var(--primary-violet);
     }
     
     .nav-mobile {
@@ -529,4 +530,20 @@ footer h4 + h4 {
         text-decoration: underline;
     }
  
+}
+
+@media (min-width: 475px) { 
+
+    .social {
+        padding: 4em 7em 2em 7em;
+    }
+
+}
+
+@media (min-width: 1440px) and (max-width: 1558px) { 
+
+    .footer-links div + div {
+        margin-left: 11em;
+    }
+    
 }
